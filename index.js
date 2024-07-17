@@ -11,7 +11,7 @@ app.use(cors({
     origin: 'https://chikku-chat.vercel.app',  // Replace with your frontend URL
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
-  credentials: true  // Adjust as per your application's needs
+  credentials: false  // Adjust as per your application's needs
 }))
 app.use(express.json())
 app.use(cookiesParser())
