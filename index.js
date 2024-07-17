@@ -31,3 +31,11 @@ connectDB().then(()=>{
         console.log("server running at " + PORT)
     })
 })
+
+
+
+app.get('/api/messages', (req, res) => {
+    res.json({ message: 'Hello from backend!' });
+  });
+  
+
