@@ -8,9 +8,10 @@ const { app, server } = require('./socket/index')
 
 // const app = express()
 app.use(cors({
-    origin : process.env.FRONTEND_URL,
-    methods: ["GET", "POST"],
-    credentials : true
+    origin: 'https://chikku-chat.vercel.app',  // Replace with your frontend URL
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true  // Adjust as per your application's needs
 }))
 app.use(express.json())
 app.use(cookiesParser())
